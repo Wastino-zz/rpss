@@ -93,7 +93,7 @@ class Game:
             print("+++ STALEMATE +++\n")
         self.p1.learn(move1, move2)
         self.p2.learn(move2, move1)
-        print("Human: {} | Computer:
+        print("Human: {} | Computer:"
               "{}\n" .format(self.p1.score, self.p2.score))
 
     def play_game(self):
@@ -113,11 +113,11 @@ if __name__ == '__main__':
 
     while True:
         participant = input("What is your name ?\n")
-        print("WELCOME {}!\n Below are the rules of
+        print("WELCOME {}!\n Below are the rules of"
               "the game, best of luck" .format(participant))
-        print("Rules are: Scissors cuts paper.
+        print("Rules are: Scissors cuts paper."
               "Paper covers rock. Rock crushes scissors.\n")
-        choice = input("CHOOSE AN OPPONENT:
+        choice = input("CHOOSE AN OPPONENT:"
                        "[RANDOM | HUMAN | CYCLE | REFLECT]\n").lower()
         if choice in roles:
             game = Game(roles['human'], roles[choice])
